@@ -48,7 +48,7 @@ class Television:
     def volume_down(self):
         """
         - This method should be used to adjust the TV volume by decrementing its value.
-        - It should only work for a TV that is on.
+        - It should only work for a TV that is on
         - If the method is called when one is on the MIN_VOLUME, the volume should not be adjusted.
         """
         pass
