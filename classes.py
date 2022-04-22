@@ -20,7 +20,6 @@ class Television:
     def power(self):
         '''
         Method to turn the tv on and off
-        :return:
         '''
         if self.__status is False:
             self.__status = True
