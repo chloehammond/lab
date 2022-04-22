@@ -8,7 +8,7 @@ class Television:
     MIN_VOLUME = 0      # Minimum TV volume
     MAX_VOLUME = 2      # Maximum TV volume
 
-    def __init__(self):
+    def __init__(self) -> None:
         '''
         Method to set the default state of the tv
         '''
@@ -17,7 +17,7 @@ class Television:
         self.__status: bool = False
         pass
 
-    def power(self):
+    def power(self) -> None:
         '''
         Method to turn the tv on and off
         '''
@@ -27,7 +27,7 @@ class Television:
             self.__status = False
         pass
 
-    def channel_up(self):
+    def channel_up(self) -> None:
         '''
         Method to turn the channel up
         '''
@@ -38,7 +38,7 @@ class Television:
                 self.__channel += 1
         pass
 
-    def channel_down(self):
+    def channel_down(self) -> None:
         '''
         Method to turn the channel down
         '''
@@ -49,7 +49,7 @@ class Television:
                 self.__channel = Television.MAX_CHANNEL
         pass
 
-    def volume_up(self):
+    def volume_up(self) -> None:
         '''
         Method to turn the volume up
         '''
@@ -60,7 +60,7 @@ class Television:
                 self.__volume += 1
         pass
 
-    def volume_down(self):
+    def volume_down(self) -> None:
         '''
         Method to turn the volume down
         '''
@@ -71,7 +71,7 @@ class Television:
                 self.__volume = Television.MIN_VOLUME
         pass
 
-    def __str__(self):
+    def __str__(self) -> str:
         '''
         Method to relay the status of the tv
         :return: The current status of each object of the tv
