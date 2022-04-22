@@ -14,7 +14,7 @@ class Television:
         '''
         self.__channel: int = Television.MIN_CHANNEL
         self.__volume: int = Television.MIN_VOLUME
-        self.__status: bool = False
+        self.__on: bool = False
         pass
 
     def power(self) -> None:
@@ -25,13 +25,13 @@ class Television:
          #   self.__status = True
         #elif self.__status is True:
          #   self.__status = False
-        self.__status = not self.__status
+        self.__on = not self.__on
 
     def channel_up(self) -> None:
         '''
         Method to turn the channel up
         '''
-        if self.__status is True:
+        if self.__on is True:
             if self.__channel == Television.MAX_CHANNEL:
                 self.__channel = Television.MIN_CHANNEL
             elif self.__channel >= Television.MIN_CHANNEL:
@@ -42,7 +42,7 @@ class Television:
         '''
         Method to turn the channel down
         '''
-        if self.__status is True:
+        if self.__on is True:
             if self.__channel > Television.MIN_CHANNEL:
                 self.__channel -= 1
             elif self.__channel == Television.MIN_CHANNEL:
@@ -53,7 +53,7 @@ class Television:
         '''
         Method to turn the volume up
         '''
-        if self.__status is True:
+        if self.__on is True:
             if self.__volume == Television.MAX_VOLUME:
                 self.__volume = Television.MAX_VOLUME
             elif self.__volume >= Television.MIN_VOLUME:
@@ -64,7 +64,7 @@ class Television:
         '''
         Method to turn the volume down
         '''
-        if self.__status is True:
+        if self.__on is True:
             if self.__volume > Television.MIN_VOLUME:
                 self.__volume -= 1
             elif self.__volume == Television.MIN_VOLUME:
@@ -76,8 +76,8 @@ class Television:
         Method to relay the status of the tv
         :return: The current status of each object of the tv
         '''
-        if self.__status is True:
-            return f'TV status: Is on = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
-        elif self.__status is False:
-            return f'TV status: Is on = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
+        if self.__on is True:
+            return f'TV status: Is on = {self.__on}, Channel = {self.__channel}, Volume = {self.__volume}'
+        elif self.__on is False:
+            return f'TV status: Is on = {self.__on}, Channel = {self.__channel}, Volume = {self.__volume}'
         pass
