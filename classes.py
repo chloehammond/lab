@@ -21,11 +21,11 @@ class Television:
         '''
         Method to turn the tv on and off
         '''
-        if self.__status is False:
-            self.__status = True
-        elif self.__status is True:
-            self.__status = False
-        pass
+        #if self.__status is False:
+         #   self.__status = True
+        #elif self.__status is True:
+         #   self.__status = False
+        self.__status = not self.__status
 
     def channel_up(self) -> None:
         '''
